@@ -45,9 +45,7 @@ const Navbar = () => {
               <div>
                 <img className="w-32" src={logo} alt="logo" />
                 <p className="text-sm text-gray-400 mt-2">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Earum soluta perspiciatis molestias enim cum repellat, magnam
-                  exercitationem distinctio aliquid nam.
+                  I'm an Undergraduate Student at SLIIT. I’m very passionate about the work that I do and aspire to work as a Software Engineer.
                 </p>
               </div>
               <ul className="flex flex-col gap-4">

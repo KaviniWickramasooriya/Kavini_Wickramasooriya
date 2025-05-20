@@ -19,19 +19,19 @@ const Achievement = () => {
             title="Lorem ipsum dolor sit amet."
             subTitle="Lorem ipsum dolor sit amet alternative."
             result="Success"
-            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus corporis dolor debitis natus sapiente, voluptates possimus minima totam!"
+            /*des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus corporis dolor debitis natus sapiente, voluptates possimus minima totam!"*/
           />
           <ResumeCard
             title="Lorem ipsum dolor sit amet."
             subTitle="Lorem ipsum dolor sit amet alternative."
             result="Success"
-            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus corporis dolor debitis natus sapiente, voluptates possimus minima totam!"
+            /*des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus corporis dolor debitis natus sapiente, voluptates possimus minima totam!"*/
           />
           <ResumeCard
             title="Lorem ipsum dolor sit amet."
             subTitle="Lorem ipsum dolor sit amet alternative."
             result="Success"
-            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus corporis dolor debitis natus sapiente, voluptates possimus minima totam!"
+            /*des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus corporis dolor debitis natus sapiente, voluptates possimus minima totam!"*/
           />
         </div>
       </div>

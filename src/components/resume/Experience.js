@@ -19,19 +19,19 @@ const Experience = () => {
             title="Sr. Software Engineer"
             subTitle="Google Out Tech - (2017 - Present)"
             result="USA"
-            des="Google's hiring process is an important part of our culture. Googlers care deeply about their teams and the people who make them up."
+            /*des="Google's hiring process is an important part of our culture. Googlers care deeply about their teams and the people who make them up."*/
           />
           <ResumeCard
             title="Web Developer & Trainer"
             subTitle="Apple Developer Team - (2012 - 2016)"
             result="MALAYSIA"
-            des="A popular destination with a growing number of highly qualified homegrown graduates, it's true that securing a role in Malaysia isn't easy."
+            /*des="A popular destination with a growing number of highly qualified homegrown graduates, it's true that securing a role in Malaysia isn't easy."*/
           />
           <ResumeCard
             title="Front-end Developer"
             subTitle="Nike - (2020 - 2011)"
             result="Oman"
-            des="The Oman economy has grown strongly over recent years, having transformed itself from a producer and innovation-based economy."
+            /*des="The Oman economy has grown strongly over recent years, having transformed itself from a producer and innovation-based economy."*/
           />
         </div>
       </div>

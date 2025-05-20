@@ -15,24 +15,30 @@ const Education = () => {
           <p className="text-sm text-designColor tracking-[4px]">2006 - 2025</p>
           <h2 className="text-3xl md:text-4xl font-bold">Education</h2>
         </div>
-        <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+        <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-5">
           <ResumeCard
             title="BSc in Software Engineering"
             subTitle="Sri Lanka Institute of Information Technology (2022 - 2024)"
-            result="2.88/4"
-            des="The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture."
+            result="2.88/4.0"
+            /*des="The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture."*/
           />
           <ResumeCard
             title="Diploma in Information Technology and English"
             subTitle="IMBS Green Campus"
-            result="4.75/5"
-            des="Higher education is tertiary education leading to award of an academic degree. Higher education, also called post-secondary education."
+            result="2023"
+            /*des="Higher education is tertiary education leading to award of an academic degree. Higher education, also called post-secondary education."*/
           />
           <ResumeCard
-            title="G.C.E. Advanced Level - 2021 - (Physical Science stream)"
+            title="G.C.E. Advanced Level - 2021 (Physical Science stream)"
             subTitle="Kalutara Balika National School"
-            result="5.00/5"
-            des="Secondary education or post-primary education covers two phases on the International Standard Classification of Education scale."
+            result="BCC"
+            /*des="Secondary education or post-primary education covers two phases on the International Standard Classification of Education scale."*/
+          />
+          <ResumeCard
+            title="G.C.E. Ordinary Level - 2019"
+            subTitle="Kalutara Balika National School"
+            result="9A"
+            /*des="Secondary education or post-primary education covers two phases on the International Standard Classification of Education scale."*/
           />
         </div>
       </div>
@@ -48,19 +54,19 @@ const Education = () => {
             title="Sr. Software Engineer"
             subTitle="Google Out Tech - (2017 - Present)"
             result="USA"
-            des="Google's hiring process is an important part of our culture. Googlers care deeply about their teams and the people who make them up."
+            /*des="Google's hiring process is an important part of our culture. Googlers care deeply about their teams and the people who make them up."*/
           />
           <ResumeCard
             title="Web Developer & Trainer"
             subTitle="Apple Developer Team - (2012 - 2016)"
             result="MALAYSIA"
-            des="A popular destination with a growing number of highly qualified homegrown graduates, it's true that securing a role in Malaysia isn't easy."
+            /*des="A popular destination with a growing number of highly qualified homegrown graduates, it's true that securing a role in Malaysia isn't easy."*/
           />
           <ResumeCard
             title="Front-end Developer"
             subTitle="Nike - (2020 - 2011)"
             result="Oman"
-            des="The Oman economy has grown strongly over recent years, having transformed itself from a producer and innovation-based economy."
+            /*des="The Oman economy has grown strongly over recent years, having transformed itself from a producer and innovation-based economy."*/
           />
         </div>
       </div>

@@ -13,33 +13,55 @@ const ContactLeft = () => {
       <div className="flex flex-col gap-4">
         <h3 className="text-3xl font-bold text-white">Kavini Wickramasooriya</h3>
         <p className="text-lg font-normal text-gray-400">
-          MERN Stack Developer
-        </p>
-        {/*<p className="text-base text-gray-400 tracking-wide">
-        </p>*/}
-        <p className="text-base text-gray-400 flex items-center gap-2">
-          Phone: <span className="text-lightText">+9470 5320812</span>
+          Full-Stack Developer
         </p>
         <p className="text-base text-gray-400 flex items-center gap-2">
-          Email: <span className="text-lightText">kaviniwickramasooriya@gmail.com</span>
+          Phone:{" "}
+          <a href="tel:+94705320812" className="text-lightText">
+            +9470 5320812
+          </a>
+        </p>
+        <p className="text-base text-gray-400 flex items-center gap-2">
+          Email:{" "}
+          <a href="mailto:kaviniwickramasooriya@gmail.com" className="text-lightText">
+            kaviniwickramasooriya@gmail.com
+          </a>
         </p>
       </div>
       <div className="flex flex-col gap-4">
         <h2 className="text-base uppercase font-titleFont mb-4">Find me in</h2>
         <div className="flex gap-4">
-          <span className="bannerIcon">
-            <FaFacebookF />
-          </span>
-          <span className="bannerIcon">
-            <FaInstagram />
-          </span>
-          <span className="bannerIcon">
+          <a 
+            href="https://lk.linkedin.com/in/kavini-wickramasooriya-937a70179" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bannerIcon"
+            aria-label="LinkedIn"
+          >
             <FaLinkedinIn />
-          </span>
+          </a>
+          <a 
+            href="https://fb.com/kavini.pramudika" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bannerIcon"
+            aria-label="Facebook"
+          >
+            <FaFacebookF />
+          </a>
+          <a 
+            href="https://instagram.com/kavini_pramudika" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bannerIcon"
+            aria-label="Instagram"
+          >
+            <FaInstagram />
+          </a>
         </div>
       </div>
     </div>
   );
 }
 
-export default ContactLeft
+export default ContactLeft;

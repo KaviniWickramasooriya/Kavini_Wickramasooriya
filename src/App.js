@@ -11,9 +11,9 @@ import Resume from "./components/resume/Resume";
 
 function App() {
   return (
-    <div className="w-full h-auto bg-bodyColor text-lightText px-8 py-2">
-        <Navbar />
-      <div className="max-w-screen-xl px-8 mx-auto">
+    <div className="w-full h-auto bg-bodyColor text-lightText px-0 py-0 sm:px-8 sm:py-2">
+      <Navbar />
+      <div className="max-w-screen-xl px-0 sm:px-8 mx-auto">
         <Banner />
         <About />
         <Features />

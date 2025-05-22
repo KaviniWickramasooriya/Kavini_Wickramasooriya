@@ -33,18 +33,18 @@ const SoftSkills = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.5 } }}
-      className="w-full px-4 sm:px-8 flex flex-col gap-10"
+      className="w-full px-4 sm:px-2 py-6 sm:py-12 flex flex-col gap-8"
     >
       {/* Title Section */}
-      <div className="py-10 font-titleFont flex flex-col gap-2 text-center sm:text-left">
-        <p className="text-sm text-designColor tracking-[4px] uppercase">
+      <div className="font-titleFont flex flex-col gap-2 text-center sm:text-left">
+        <p className="text-xs sm:text-sm text-designColor tracking-[3px] uppercase">
           Professional
         </p>
-        <h2 className="text-3xl sm:text-4xl font-bold">Soft Skills</h2>
+        <h2 className="text-2xl sm:text-4xl font-bold">Soft Skills</h2>
       </div>
 
       {/* Grid Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-2">
         {softSkills.map((skill, index) => (
           <motion.div
             key={index}
@@ -52,9 +52,9 @@ const SoftSkills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="p-5 rounded-xl border border-gray-700 bg-[#1e1e1e] hover:bg-[#2c2c2c] shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out cursor-pointer"
+            className="p-4 sm:p-5 rounded-xl border border-gray-700 bg-[#1e1e1e] hover:bg-[#2c2c2c] shadow-sm hover:shadow-lg transition-all duration-300 ease-in-out cursor-pointer transform hover:scale-[1.02]"
           >
-            <h3 className="text-lg sm:text-xl font-semibold text-designColor mb-1">
+            <h3 className="text-base sm:text-lg font-semibold text-designColor mb-2">
               {skill.title}
             </h3>
             <p className="text-sm sm:text-base text-gray-300 leading-relaxed">

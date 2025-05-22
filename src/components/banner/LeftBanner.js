@@ -11,7 +11,7 @@ const LeftBanner = () => {
   });
 
   return (
-    <div className="w-full lg:w-1/2 flex flex-col gap-8 px-4 sm:px-6">
+    <div className="w-full lg:w-1/2 flex flex-col gap-8 px-4 sm:px-2">
       <div className="flex flex-col gap-4 text-center lg:text-left">
         <h3 className="text-base sm:text-lg font-normal text-gray-400">
           WELCOME TO MY PROFILE

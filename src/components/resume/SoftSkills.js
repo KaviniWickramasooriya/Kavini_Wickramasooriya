@@ -33,33 +33,29 @@ const SoftSkills = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.5 } }}
-      className="w-full px-4 sm:px-2 py-6 sm:py-12 flex flex-col gap-8"
+      className="w-full flex flex-col gap-10"
     >
-      {/* Title Section */}
-      <div className="font-titleFont flex flex-col gap-2 text-center sm:text-left">
-        <p className="text-xs sm:text-sm text-designColor tracking-[3px] uppercase">
+      {/* Header Section */}
+      <div className="py-12 font-titleFont flex flex-col gap-4">
+        <p className="text-sm text-designColor tracking-[4px] uppercase">
           Professional
         </p>
-        <h2 className="text-2xl sm:text-4xl font-bold">Soft Skills</h2>
+        <h2 className="text-3xl md:text-4xl font-bold">Soft Skills</h2>
       </div>
 
-      {/* Grid Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-2">
+      {/* Skills Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {softSkills.map((skill, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="p-4 sm:p-5 rounded-xl border border-gray-700 bg-[#1e1e1e] hover:bg-[#2c2c2c] shadow-sm hover:shadow-lg transition-all duration-300 ease-in-out cursor-pointer transform hover:scale-[1.02]"
+            className="w-full p-5 rounded-lg border border-gray-700 bg-[#1e1e1e] hover:bg-[#2c2c2c] shadow-md hover:shadow-xl transition-all duration-300 ease-in-out"
           >
-            <h3 className="text-base sm:text-lg font-semibold text-designColor mb-2">
-              {skill.title}
-            </h3>
-            <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-              {skill.description}
-            </p>
+            <h3 className="text-lg font-semibold text-designColor mb-2">{skill.title}</h3>
+            <p className="text-sm text-gray-300 leading-relaxed">{skill.description}</p>
           </motion.div>
         ))}
       </div>

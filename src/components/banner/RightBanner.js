@@ -7,7 +7,7 @@ const RightBanner = () => {
       <img
         src={bannerImg}
         alt="Profile Banner"
-        className="w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] lg:w-[400px] lg:h-[400px] object-cover rounded-full"
+        className="w-[180px] h-[180px] sm:w-[260px] sm:h-[260px] md:w-[320px] md:h-[320px] lg:w-[400px] lg:h-[400px] object-cover rounded-full"
       />
     </div>
   );

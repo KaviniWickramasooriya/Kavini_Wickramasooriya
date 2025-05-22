@@ -16,9 +16,9 @@ const LeftBanner = () => {
         <h3 className="text-base sm:text-lg font-normal text-gray-400">
           WELCOME TO MY PROFILE
         </h3>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-          Hi, I'm{" "}
-          <span className="text-designColor capitalize block">
+        <h2 className="text-l sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white leading-tight">
+          Hi, I'm
+          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-designColor capitalize block">
             Kavini Wickramasooriya
           </span>
         </h2>

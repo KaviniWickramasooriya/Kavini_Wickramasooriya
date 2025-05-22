@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Title from '../layouts/Title';
 import Education from './Education';
 import Skills from './Skills';
+import SoftSkills from './SoftSkills';
 import Certificates from "./Certificates";
 
 const Resume = () => {
@@ -9,7 +10,8 @@ const Resume = () => {
 
   const tabs = [
     { key: "education", label: "Education" },
-    { key: "skills", label: "Professional Skills" },
+    { key: "skills", label: "Technical Skills" },
+    { key: "softskills", label: "Professional Skills" },
     { key: "certificates", label: "Certificates" },
   ];
 
@@ -19,7 +21,7 @@ const Resume = () => {
         <Title title="3+ YEARS OF EXPERIENCE" des="My Resume" />
       </div>
       <div className="flex justify-center">
-        <ul className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <ul className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
           {tabs.map((tab) => (
             <li
               key={tab.key}
@@ -34,6 +36,7 @@ const Resume = () => {
 
       {activeTab === "education" && <Education />}
       {activeTab === "skills" && <Skills />}
+      {activeTab === "softskills" && <SoftSkills />}
       {activeTab === "certificates" && <Certificates />}
     </section>
   );

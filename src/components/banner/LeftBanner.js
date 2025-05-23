@@ -33,7 +33,7 @@ const LeftBanner = () => {
 
       <div className="flex justify-center lg:justify-start">
         <a
-          href="https://drive.google.com/file/d/1R2ThVkENx8aMDb6p9RMUlFLUF5wpVzXw/view?usp=sharing"
+          href="https://drive.google.com/file/d/1IJKXQZ_JDMKCjIvbqYIcAd_wUe_mr5M2/view?usp=drivesdk"
           rel="noopener noreferrer"
           className="px-6 py-2 border-2 border-designColor text-designColor rounded-md hover:bg-designColor hover:text-white transition"
         >

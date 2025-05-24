@@ -21,6 +21,7 @@ import {
   projectNineteen,
   projectTwenty,
   projectTwentyOne,
+  projectTwentyTwo,
 } from "../../assets/index";
 
 import ProjectsCard from './ProjectsCard';
@@ -113,7 +114,7 @@ const Projects = () => {
     {
       title: "Restaurant Management System",
       des: "A system to manage restaurant operations and orders.",
-      src: projectThree,
+      src: projectTwentyTwo,
       technologies: ["Java (JFrame)", "SQL"],
       githubLink: "https://github.com/KaviniWickramasooriya/Restaurant_Management_System",
     },

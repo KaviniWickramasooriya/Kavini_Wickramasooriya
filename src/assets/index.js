@@ -23,6 +23,7 @@ import projectEighteen from "./images/projects/projectEighteen.jpg";
 import projectNineteen from "./images/projects/projectNineteen.jpg";
 import projectTwenty from "./images/projects/projectTwenty.jpg";
 import projectTwentyOne from "./images/projects/projectTwentyOne.jpg";
+import projectTwentyTwo from "./images/projects/projectTwentyTwo.jpg";
 
 import contactImg from "./images/contact/contactImg.png";
 
@@ -51,5 +52,6 @@ export {
   projectNineteen,
   projectTwenty,
   projectTwentyOne,
+  projectTwentyTwo,
   contactImg,
 };

@@ -1,6 +1,6 @@
-import React,{useState} from 'react'
-import Title from '../layouts/Title';
-import ContactLeft from './ContactLeft';
+import React, { useState, useEffect } from "react";
+import Title from "../layouts/Title";
+import ContactLeft from "./ContactLeft";
 
 const Contact = () => {
   const [username, setUsername] = useState("");
@@ -11,40 +11,71 @@ const Contact = () => {
   const [errMsg, setErrMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
 
-  // ========== Email Validation start here ==============
   const emailValidation = () => {
     return String(email)
-      .toLocaleLowerCase()
+      .toLowerCase()
       .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
   };
-  // ========== Email Validation end here ================
 
-  const handleSend = (e) => {
+  const handleSend = async (e) => {
     e.preventDefault();
-    if (username === "") {
-      setErrMsg("Username is required!");
-    } else if (phoneNumber === "") {
-      setErrMsg("Phone number is required!");
-    } else if (email === "") {
-      setErrMsg("Please give your Email!");
-    } else if (!emailValidation(email)) {
-      setErrMsg("Give a valid Email!");
-    } else if (subject === "") {
-      setErrMsg("Plese give your Subject!");
-    } else if (message === "") {
-      setErrMsg("Message is required!");
-    } else {
-      setSuccessMsg(
-        `Thank you dear ${username}, Your Messages has been sent Successfully!`
-      );
-      setErrMsg("");
-      setUsername("");
-      setPhoneNumber("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
+
+    // Validate
+    if (!username) return setErrMsg("Username is required!");
+    if (!phoneNumber) return setErrMsg("Phone number is required!");
+    if (!email) return setErrMsg("Please give your Email!");
+    if (!emailValidation(email)) return setErrMsg("Give a valid Email!");
+    if (!subject) return setErrMsg("Please give your Subject!");
+    if (!message) return setErrMsg("Message is required!");
+
+    setErrMsg(""); // Clear previous errors
+
+    const formData = {
+      access_key: "3c2b6575-366b-4b10-b9cd-dd28b265323b",
+      name: username,
+      phone: phoneNumber,
+      email_address: email,
+      subject: subject,
+      message: message,
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSuccessMsg(
+          `Thank you dear ${username}, your message has been sent successfully!`
+        );
+        setUsername("");
+        setPhoneNumber("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      } else {
+        setErrMsg("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setErrMsg("Failed to send message. Please try again later.");
     }
   };
+
+  // Clear success or error messages after 3 seconds
+  useEffect(() => {
+    if (successMsg || errMsg) {
+      const timer = setTimeout(() => {
+        setSuccessMsg("");
+        setErrMsg("");
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [successMsg, errMsg]);
+
   return (
     <section
       id="contact"
@@ -57,17 +88,10 @@ const Contact = () => {
         <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
           <ContactLeft />
           <div className="w-full lgl:w-[60%] h-full py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne">
-            <form className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5">
-              {errMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
-                  {errMsg}
-                </p>
-              )}
-              {successMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-green-500 text-base tracking-wide animate-bounce">
-                  {successMsg}
-                </p>
-              )}
+            <form
+              className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5"
+              onSubmit={handleSend}
+            >
               <div className="w-full flex flex-col lgl:flex-row gap-10">
                 <div className="w-full lgl:w-1/2 flex flex-col gap-4">
                   <p className="text-sm text-gray-400 uppercase tracking-wide">
@@ -81,6 +105,7 @@ const Contact = () => {
                       "outline-designColor"
                     } contactInput`}
                     type="text"
+                    placeholder="Your name"
                   />
                 </div>
                 <div className="w-full lgl:w-1/2 flex flex-col gap-4">
@@ -95,6 +120,7 @@ const Contact = () => {
                       "outline-designColor"
                     } contactInput`}
                     type="text"
+                    placeholder="Phone Number"
                   />
                 </div>
               </div>
@@ -110,6 +136,7 @@ const Contact = () => {
                     "outline-designColor"
                   } contactInput`}
                   type="email"
+                  placeholder="Your Email"
                 />
               </div>
               <div className="flex flex-col gap-4">
@@ -120,10 +147,11 @@ const Contact = () => {
                   onChange={(e) => setSubject(e.target.value)}
                   value={subject}
                   className={`${
-                    errMsg === "Plese give your Subject!" &&
+                    errMsg === "Please give your Subject!" &&
                     "outline-designColor"
                   } contactInput`}
                   type="text"
+                  placeholder="Subject"
                 />
               </div>
               <div className="flex flex-col gap-4">
@@ -138,25 +166,34 @@ const Contact = () => {
                   } contactTextArea`}
                   cols="30"
                   rows="8"
+                  placeholder="Your Message"
                 ></textarea>
               </div>
+
+              {/* Submit Button */}
               <div className="w-full">
                 <button
-                  onClick={handleSend}
+                  type="submit"
                   className="w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-transparent"
                 >
                   Send Message
                 </button>
               </div>
-              {errMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
-                  {errMsg}
-                </p>
-              )}
-              {successMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-green-500 text-base tracking-wide animate-bounce">
-                  {successMsg}
-                </p>
+
+              {/* Feedback Messages */}
+              {(errMsg || successMsg) && (
+                <div className="w-full pt-4">
+                  {errMsg && (
+                    <p className="text-center text-orange-500 text-base tracking-wide animate-fade-in">
+                      {errMsg}
+                    </p>
+                  )}
+                  {successMsg && (
+                    <p className="text-center text-green-500 text-base tracking-wide animate-fade-in">
+                      {successMsg}
+                    </p>
+                  )}
+                </div>
               )}
             </form>
           </div>
@@ -164,6 +201,6 @@ const Contact = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Contact
+export default Contact;

@@ -53,23 +53,23 @@ const Education = () => {
         <div className="mt-6 lgl:mt-14 w-full h-auto border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
             title="Senior Prefect"
-            subTitle="Kalutara Balika National School (2015 - 2018)"
-            result="Leadership Role"
+            subTitle="Kalutara Balika National School"
+            result="(2015 - 2018)"
           />
           <ResumeCard
             title="Junior Prefect"
-            subTitle="Kalutara Balika National School (2009 - 2011)"
-            result="Leadership Role"
+            subTitle="Kalutara Balika National School"
+            result="(2009 - 2011)"
           />
           <ResumeCard
             title="Leader of the Chess Team"
-            subTitle="Kalutara Balika National School (2010 - 2017)"
-            result="Team Captain"
+            subTitle="Kalutara Balika National School"
+            result="(2010 - 2017)"
           />
           <ResumeCard
             title="Member of Senior Western Band"
-            subTitle="Kalutara Balika National School (2015 - 2017)"
-            result="Performance Team"
+            subTitle="Kalutara Balika National School"
+            result="(2015 - 2017)"
           />
         </div>
       </div>

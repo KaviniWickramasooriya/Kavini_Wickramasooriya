@@ -4,7 +4,7 @@ import { useTypewriter } from "react-simple-typewriter";
 const LeftBanner = () => {
   const [text] = useTypewriter({
     words: [
-      "Accountancy & Finance Enthusiast.",
+      "Tech & Finance Enthusiast.",
       "Software Engineer."
     ],
     loop: true,
@@ -38,7 +38,7 @@ const LeftBanner = () => {
 
       <div className="flex justify-center lg:justify-start">
         
-          <a href="https://drive.google.com/file/d/1IJKXQZ_JDMKCjIvbqYIcAd_wUe_mr5M2/view?usp=drivesdk"
+          <a href="https://drive.google.com/file/d/1t3EJcQIh8cNKIOtW8wLsV2Uzgt1VE7cf/view?usp=sharing"
           rel="noopener noreferrer"
           className="px-6 py-2 border-2 border-designColor text-designColor rounded-md hover:bg-designColor hover:text-white transition"
         >

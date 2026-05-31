@@ -45,7 +45,7 @@ const Navbar = () => {
               <div>
                 <img className="w-32" src={logo} alt="logo" />
                 <p className="text-sm text-gray-400 mt-2">
-                  I'm an Undergraduate Student at SLIIT. I’m very passionate about the work that I do and aspire to work as a Software Engineer.
+                  A Software Engineer with hands-on experience in full-stack and mobile development, passionate about technology, finance, and building impactful digital solutions.
                 </p>
               </div>
               <ul className="flex flex-col gap-4">

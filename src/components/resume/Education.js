@@ -37,7 +37,7 @@ const Education = () => {
             result="Completed"
           />
           <ResumeCard
-            title="G.C.E. A/L – Physical Science (Chemistry B, Physics C, Combined Maths C)"
+            title="G.C.E. A/L – Physical Science (Chemistry-B, Physics-C, Combined Maths-C)"
             subTitle="Kalutara Balika National School (2020)"
             result="1B 2C"
           />

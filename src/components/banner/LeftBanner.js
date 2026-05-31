@@ -13,6 +13,8 @@ const LeftBanner = () => {
     delaySpeed: 2000,
   });
 
+  const article = text.trimStart().match(/^[AEIOUaeiou]/) ? "an" : "a";
+
   return (
     <div className="w-full lg:w-1/2 flex flex-col gap-8 px-4 sm:px-2">
       <div className="flex flex-col gap-4 text-center lg:text-left">
@@ -26,19 +28,19 @@ const LeftBanner = () => {
           </span>
         </h2>
         <h6 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-          a <span>{text}</span>
+          {article} <span>{text}</span>
         </h6>
         <p className="text-sm sm:text-base font-bodyFont leading-relaxed text-gray-300 mt-2">
-          A highly motivated Software Engineering undergraduate at SLIIT, passionate about
-          full-stack development, data analysis, and building meaningful digital experiences.
-          Currently pursuing professional qualifications in
-          Accountancy, Banking and Finance.
+          A Software Engineer who has completed degrees in Software Engineering
+          (SLIIT) and Applied Science (University of Sri Jayewardenepura). Passionate about full-stack development, data
+          analysis, and building meaningful digital experiences, while pursuing
+          professional qualifications in Accountancy, Banking and Finance.
         </p>
       </div>
 
       <div className="flex justify-center lg:justify-start">
         
-          <a href="https://drive.google.com/file/d/1t3EJcQIh8cNKIOtW8wLsV2Uzgt1VE7cf/view?usp=sharing"
+        <a href="https://drive.google.com/file/d/1t3EJcQIh8cNKIOtW8wLsV2Uzgt1VE7cf/view?usp=sharing"
           rel="noopener noreferrer"
           className="px-6 py-2 border-2 border-designColor text-designColor rounded-md hover:bg-designColor hover:text-white transition"
         >

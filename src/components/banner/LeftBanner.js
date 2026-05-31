@@ -4,7 +4,7 @@ import { useTypewriter } from "react-simple-typewriter";
 const LeftBanner = () => {
   const [text] = useTypewriter({
     words: [
-      "Tech & Finance Enthusiast.",
+      "Finance & Banking Enthusiast.",
       "Software Engineer."
     ],
     loop: true,

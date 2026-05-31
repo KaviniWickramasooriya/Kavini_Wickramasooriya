@@ -1,6 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedinIn, FaReact, FaHtml5, FaNodeJs } from "react-icons/fa";
-import { SiMongodb, SiTailwindcss } from "react-icons/si";
+import { FaGithub, FaLinkedinIn, FaReact, FaHtml5, FaJava, FaWindows } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -115,33 +114,24 @@ const About = () => {
                 </span>
               </a>
               
-              <a href="https://nodejs.org/"
+              <a href="https://www.java.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Node.js"
+                aria-label="Java"
               >
                 <span className="bannerIcon">
-                  <FaNodeJs />
+                  <FaJava />
                 </span>
               </a>
-              
-              <a href="https://www.mongodb.com/"
+
+
+              <a href="https://www.microsoft.com/en-us/microsoft-365"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="MongoDB"
+                aria-label="Microsoft 365"
               >
                 <span className="bannerIcon">
-                  <SiMongodb />
-                </span>
-              </a>
-              
-              <a href="https://tailwindcss.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Tailwind CSS"
-              >
-                <span className="bannerIcon">
-                  <SiTailwindcss />
+                  <FaWindows />
                 </span>
               </a>
             </div>

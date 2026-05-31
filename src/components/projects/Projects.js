@@ -23,6 +23,7 @@ import {
   projectTwentyOne,
   projectTwentyTwo,
   projectTwentyThree,
+  projectTwentyFour
 } from "../../assets/index";
 
 import ProjectsCard from './ProjectsCard';

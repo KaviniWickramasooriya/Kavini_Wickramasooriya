@@ -22,6 +22,7 @@ import {
   projectTwenty,
   projectTwentyOne,
   projectTwentyTwo,
+  projectTwentyThree,
 } from "../../assets/index";
 
 import ProjectsCard from './ProjectsCard';
@@ -32,8 +33,16 @@ const Projects = () => {
   const projectsPerPage = 3;
 
   const projects = [
+    // ── PAGE 1 ──────────────────────────────────────────────
     {
-      title: "TastiGo - Online Food Ordering Application",
+      title: "Lumi Bot – Emotion Aware Smart Lamp",
+      des: "A smart lamp that detects a user's mood using OpenCV and responds with color-changing LEDs and music. An ESP32 microcontroller controls the lighting and audio, communicating with the Python application through serial communication.",
+      src: projectTwentyThree,           
+      technologies: ["Python", "OpenCV", "ESP32", "Arduino C++", "Speech Recognition", "Serial Communication"],
+      githubLink: "https://github.com/KaviniWickramasooriya/LumiBot",  
+    },
+    {
+      title: "TastiGo – Online Food Ordering Application",
       des: "An online food ordering platform for seamless dining experiences.",
       src: projectSeventeen,
       technologies: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB"],
@@ -46,6 +55,15 @@ const Projects = () => {
       src: projectThirteen,
       technologies: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB"],
       githubLink: "https://github.com/KaviniPramudika/Emerald-Bay-Resort-Restaurant",
+    },
+
+    // ── PAGE 2 ──────────────────────────────────────────────
+    {
+      title: "Blood Circle – Blood Donation Management System",
+      des: "A microservices-based web application to streamline blood donation management and connect donors, recipients, and event organizers. Built with JWT authentication, CI/CD via Jenkins, and containerized using Docker.",
+      src: projectTwentyFour,              
+      technologies: ["ReactJS", "NodeJS", "ExpressJS", "PostgreSQL", "Docker", "Jenkins"],
+      githubLink: "https://github.com/KaviniWickramasooriya/BloodCircle", 
     },
     {
       title: "EcoSort Waste Management System",
@@ -61,6 +79,8 @@ const Projects = () => {
       technologies: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB"],
       githubLink: "https://github.com/KaviniWickramasooriya/Job_Vacancy_Website",
     },
+
+    // ── PAGE 3 ──────────────────────────────────────────────
     {
       title: "Hospital Website",
       des: "A website for managing hospital services.",
@@ -69,7 +89,7 @@ const Projects = () => {
       githubLink: "https://github.com/KaviniPramudika/Hospital_Website",
     },
     {
-      title: "SALICS - Job Vacancy Web Application",
+      title: "SALICS – Job Vacancy Web Application",
       des: "A platform to browse and apply for job vacancies.",
       src: projectTen,
       technologies: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB"],
@@ -83,6 +103,8 @@ const Projects = () => {
       githubLink: "https://github.com/KaviniWickramasooriya/Global_Explorer_Country_App",
       hostedLink: "https://global-explorer-lac.vercel.app/",
     },
+
+    // ── PAGE 4 ──────────────────────────────────────────────
     {
       title: "FitPro Fitness Mobile Application",
       des: "A mobile app to track fitness goals and routines.",
@@ -104,6 +126,8 @@ const Projects = () => {
       technologies: ["HTML", "CSS", "JS", "PHP"],
       githubLink: "https://github.com/KaviniPramudika/Online_Bookstore",
     },
+
+    // ── PAGE 5 ──────────────────────────────────────────────
     {
       title: "Tour and Travel Website",
       des: "A website for booking tours and travel services.",
@@ -125,6 +149,8 @@ const Projects = () => {
       technologies: ["HTML", "CSS", "JS", "PHP"],
       githubLink: "https://github.com/KaviniPramudika/University-Website",
     },
+
+    // ── PAGE 6 ──────────────────────────────────────────────
     {
       title: "ToDo App",
       des: "A mobile app to manage tasks and to-do lists.",
@@ -132,7 +158,7 @@ const Projects = () => {
       technologies: ["Kotlin", "SQLite"],
       githubLink: "https://github.com/KaviniWickramasooriya/To_Do_App",
     },
-        {
+    {
       title: "Snake Game",
       des: "A mobile version of the classic Snake game.",
       src: projectSix,
@@ -146,6 +172,8 @@ const Projects = () => {
       technologies: ["HTML", "CSS", "JS", "PHP", "Bootstrap"],
       githubLink: "https://github.com/KaviniWickramasooriya/Gym_Management_System",
     },
+
+    // ── PAGE 7 ──────────────────────────────────────────────
     {
       title: "Save the Rocket Game",
       des: "A mobile game to save a rocket in space.",
@@ -162,11 +190,13 @@ const Projects = () => {
     },
     {
       title: "Brick Breaker Game",
-      des: " A classic arcade game developed for mobile.",
+      des: "A classic arcade game developed for mobile.",
       src: projectFive,
       technologies: ["Kotlin", "SQLite"],
       githubLink: "https://github.com/KaviniWickramasooriya/Brick_Breaker_Game",
     },
+
+    // ── PAGE 8 ──────────────────────────────────────────────
     {
       title: "Personal Finance Tracker System",
       des: "A web app to track income, expenses, and budgets with visual reports.",
@@ -183,15 +213,11 @@ const Projects = () => {
     },
   ];
 
-  // Logic for pagination
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
   const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
 
-  // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-  // Calculate total pages
   const totalPages = Math.ceil(projects.length / projectsPerPage);
 
   return (
@@ -218,8 +244,9 @@ const Projects = () => {
           />
         ))}
       </div>
+
       {/* Pagination */}
-      <div className="flex justify-center mt-6 space-x-4">
+      <div className="flex justify-center items-center mt-8 gap-3">
         <button
           onClick={() => paginate(currentPage - 1)}
           disabled={currentPage === 1}
@@ -228,6 +255,21 @@ const Projects = () => {
         >
           <FaChevronLeft size={18} />
         </button>
+
+        {/* Page number indicators */}
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => (
+          <button
+            key={num}
+            onClick={() => paginate(num)}
+            className={`w-8 h-8 rounded-full text-sm font-medium transition-colors duration-200 ${
+              currentPage === num
+                ? "bg-designColor text-white"
+                : "bg-gray-700 text-gray-300 hover:bg-gray-500"
+            }`}
+          >
+            {num}
+          </button>
+        ))}
 
         <button
           onClick={() => paginate(currentPage + 1)}

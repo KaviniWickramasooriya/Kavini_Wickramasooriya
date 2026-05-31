@@ -3,7 +3,10 @@ import { useTypewriter } from "react-simple-typewriter";
 
 const LeftBanner = () => {
   const [text] = useTypewriter({
-    words: ["Full Stack Developer.", "Mobile App Developer."],
+    words: [
+      "Accountancy & Finance Enthusiast.",
+      "Software Engineer."
+    ],
     loop: true,
     typeSpeed: 20,
     deleteSpeed: 10,
@@ -26,14 +29,16 @@ const LeftBanner = () => {
           a <span>{text}</span>
         </h6>
         <p className="text-sm sm:text-base font-bodyFont leading-relaxed text-gray-300 mt-2">
-          I'm an Undergraduate Student at SLIIT. I’m very passionate about the
-          work that I do and aspire to work as a Software Engineer.
+          A highly motivated Software Engineering undergraduate at SLIIT, passionate about
+          full-stack development, data analysis, and building meaningful digital experiences.
+          Currently pursuing professional qualifications in
+          Accountancy, Banking and Finance.
         </p>
       </div>
 
       <div className="flex justify-center lg:justify-start">
-        <a
-          href="https://drive.google.com/file/d/1IJKXQZ_JDMKCjIvbqYIcAd_wUe_mr5M2/view?usp=drivesdk"
+        
+          <a href="https://drive.google.com/file/d/1IJKXQZ_JDMKCjIvbqYIcAd_wUe_mr5M2/view?usp=drivesdk"
           rel="noopener noreferrer"
           className="px-6 py-2 border-2 border-designColor text-designColor rounded-md hover:bg-designColor hover:text-white transition"
         >

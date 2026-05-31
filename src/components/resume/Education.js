@@ -17,29 +17,39 @@ const Education = () => {
         </div>
         <div className="mt-6 lgl:mt-14 w-full h-auto border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-5">
           <ResumeCard
-            title="BSc (Hons) in Information Technology specializing in Software Engineering)"
-            subTitle="Sri Lanka Institute of Information Technology (2022 - Present)"
-            result="2.88/4.0"
+            title="BSc (Hons) in Information Technology specializing in Software Engineering"
+            subTitle="Sri Lanka Institute of Information Technology (2022 - 2026)"
+            result="Completed"
           />
           <ResumeCard
-            title="BSc in Applied Science (CS, Mathematics, and Physics)"
-            subTitle="University of Sri Jayewardenepura (2023 - Present)"
-            result="In Progress"
+            title="Higher Diploma in Information Technology"
+            subTitle="Sri Lanka Institute of Information Technology (2022 - 2024)"
+            result="Completed"
           />
           <ResumeCard
-            title="Diploma in IT and English"
+            title="BSc in Applied Science (Computer Science, Physics, Mathematics)"
+            subTitle="University of Sri Jayewardenepura (2023 - 2026)"
+            result="Completed"
+          />
+          <ResumeCard
+            title="Diploma in Information Technology"
             subTitle="IMBS Green Campus (2023)"
             result="Completed"
           />
           <ResumeCard
-            title="G.C.E. A/L - Physical Science"
+            title="G.C.E. A/L – Physical Science (Chemistry B, Physics C, Combined Maths C)"
             subTitle="Kalutara Balika National School (2020)"
             result="1B 2C"
           />
           <ResumeCard
-            title="G.C.E. O/L"
-            subTitle="Kalutara Balika National School (2017)"
-            result="9A"
+            title="G.C.E. O/L (2018) – Second Language Tamil"
+            subTitle="Kalutara Balika National School"
+            result="A"
+          />
+          <ResumeCard
+            title="G.C.E. O/L (2017)"
+            subTitle="Kalutara Balika National School"
+            result="9 As"
           />
         </div>
       </div>
@@ -70,6 +80,11 @@ const Education = () => {
             title="Member of Senior Western Band"
             subTitle="Kalutara Balika National School"
             result="(2015 - 2017)"
+          />
+          <ResumeCard
+            title="Member of School Swimming Association"
+            subTitle="Kalutara Balika National School"
+            result="(2014 - 2016)"
           />
         </div>
       </div>

@@ -19,13 +19,20 @@ const About = () => {
         {/* Intro Paragraph */}
         <div className="text-gray-300 text-base sm:text-lg leading-relaxed mb-12 text-justify">
           <p>
-            I am currently pursuing my Software Engineering degree at the
-            <span className="text-designColor font-medium"> Sri Lanka Institute of Information Technology (SLIIT)</span>,
-            alongside an Applied Science degree at the
-            <span className="text-designColor font-medium"> University of Sri Jayewardenepura</span>. I thrive in environments where innovation meets collaboration.
+            A highly motivated graduate with a strong academic background in Software Engineering and Physical Science,
+            specialising in Mathematics, Physics, and Computer Science, complemented by ongoing professional studies in
+            <span className="text-designColor font-medium"> Accountancy</span> and{" "}
+            <span className="text-designColor font-medium">Banking & Finance</span>. I am passionate about applying
+            technology, data analysis, finance, and business insights to support organisational growth and innovation.
           </p>
           <p className="mt-4">
-            With a deep understanding of <span className="text-designColor font-medium">Object-Oriented Programming (OOP)</span> and real-world experience from university projects, I specialize in building web and mobile applications using the <span className="text-designColor font-medium">MERN Stack</span> and cross-platform tools like <span className="text-designColor font-medium">Flutter</span>. My goal is to create meaningful digital experiences and contribute to impactful software projects.
+            I am currently pursuing my{" "}
+            <span className="text-designColor font-medium">BSc (Hons) in Software Engineering</span> at{" "}
+            <span className="text-designColor font-medium">SLIIT</span>, alongside a{" "}
+            <span className="text-designColor font-medium">BSc in Applied Science</span> at the{" "}
+            <span className="text-designColor font-medium">University of Sri Jayewardenepura</span>. With experience in
+            full-stack system development, business analysis, and data-driven decision-making, I thrive in dynamic and
+            fast-paced professional environments.
           </p>
         </div>
 
@@ -33,18 +40,19 @@ const About = () => {
         <div className="text-center mb-12">
           <h3 className="text-2xl font-semibold text-white mb-2">Contact Me</h3>
           <div className="text-gray-400 flex flex-col gap-2">
-            <a
-              href="tel:+94705320812"
+            
+              <a href="tel:+94705320812"
               className="text-lightText hover:text-designColor transition-colors"
             >
               📞 +94 70 532 0812
             </a>
-            <a
-              href="mailto:kaviniwickramasooriya@gmail.com"
+            
+              <a href="mailto:kaviniwickramasooriya@gmail.com"
               className="text-lightText hover:text-designColor transition-colors"
             >
               ✉️ kaviniwickramasooriya@gmail.com
             </a>
+            <p className="text-lightText">📍 No. 373, Galle Road, Payagala North</p>
           </div>
         </div>
 
@@ -56,8 +64,8 @@ const About = () => {
               Find me in
             </h2>
             <div className="flex gap-4 justify-center">
-              <a
-                href="https://github.com/KaviniPramudika"
+              
+                <a href="https://github.com/KaviniPramudika"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -66,8 +74,8 @@ const About = () => {
                   <FaGithub />
                 </span>
               </a>
-              <a
-                href="https://www.linkedin.com/in/kavini-wickramasooriya-937a70179/"
+              
+                <a href="https://www.linkedin.com/in/kavini-wickramasooriya-937a70179/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -85,8 +93,8 @@ const About = () => {
               Best Skill On
             </h2>
             <div className="flex gap-4 justify-center">
-              <a
-                href="https://reactjs.org/"
+              
+                <a href="https://reactjs.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="React"
@@ -95,8 +103,8 @@ const About = () => {
                   <FaReact />
                 </span>
               </a>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+              
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="HTML5"
@@ -105,8 +113,8 @@ const About = () => {
                   <FaHtml5 />
                 </span>
               </a>
-              <a
-                href="https://www.java.com/"
+              
+                <a href="https://www.java.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Java"
@@ -115,8 +123,8 @@ const About = () => {
                   <FaJava />
                 </span>
               </a>
-              <a
-                href="https://flutter.dev/"
+              
+                <a href="https://flutter.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Flutter"

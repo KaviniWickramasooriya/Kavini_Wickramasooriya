@@ -25,7 +25,7 @@ import projectTwenty from "./images/projects/projectTwenty.jpg";
 import projectTwentyOne from "./images/projects/projectTwentyOne.jpg";
 import projectTwentyTwo from "./images/projects/projectTwentyTwo.jpg";
 import projectTwentyThree from "./images/projects/projectTwentyThree.png";
-import projectTwentyFour from "./images/projects/projectTwentyFour.jpg";
+import projectTwentyFour from "./images/projects/projectTwentyFour.png";
 
 import contactImg from "./images/contact/contactImg.png";
 

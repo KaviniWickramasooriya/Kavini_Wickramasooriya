@@ -23,7 +23,7 @@ import {
   projectTwentyOne,
   projectTwentyTwo,
   projectTwentyThree,
-  projectTwentyFour
+  projectTwentyFour,
 } from "../../assets/index";
 
 import ProjectsCard from './ProjectsCard';
@@ -38,9 +38,9 @@ const Projects = () => {
     {
       title: "Lumi Bot – Emotion Aware Smart Lamp",
       des: "A smart lamp that detects a user's mood using OpenCV and responds with color-changing LEDs and music. An ESP32 microcontroller controls the lighting and audio, communicating with the Python application through serial communication.",
-      src: projectTwentyThree,           
+      src: projectTwentyThree,
       technologies: ["Python", "OpenCV", "ESP32", "Arduino C++", "Speech Recognition", "Serial Communication"],
-      githubLink: "https://github.com/KaviniWickramasooriya/LumiBot",  
+      githubLink: "https://github.com/KaviniWickramasooriya/LumiBot-Smart-lamp-with-mood-based-music-control",
     },
     {
       title: "TastiGo – Online Food Ordering Application",
@@ -62,9 +62,9 @@ const Projects = () => {
     {
       title: "Blood Circle – Blood Donation Management System",
       des: "A microservices-based web application to streamline blood donation management and connect donors, recipients, and event organizers. Built with JWT authentication, CI/CD via Jenkins, and containerized using Docker.",
-      src: projectTwentyFour,              
+      src: projectTwentyFour,
       technologies: ["ReactJS", "NodeJS", "ExpressJS", "PostgreSQL", "Docker", "Jenkins"],
-      githubLink: "https://github.com/KaviniWickramasooriya/BloodCircle", 
+      githubLink: "https://github.com/KaviniWickramasooriya/Blood_Circle-Blood_Donation_Management_System",
     },
     {
       title: "EcoSort Waste Management System",
@@ -78,7 +78,7 @@ const Projects = () => {
       des: "A web app for translating text across multiple languages.",
       src: projectSixteen,
       technologies: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB"],
-      githubLink: "https://github.com/KaviniWickramasooriya/Job_Vacancy_Website",
+      githubLink: "https://github.com/KaviniWickramasooriya/TransMate_Translator_App",
     },
 
     // ── PAGE 3 ──────────────────────────────────────────────
@@ -94,7 +94,7 @@ const Projects = () => {
       des: "A platform to browse and apply for job vacancies.",
       src: projectTen,
       technologies: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB"],
-      githubLink: "https://bitbucket.org/my_projects_iresh/workspace/projects/FOOD",
+      githubLink: "https://github.com/KaviniWickramasooriya/Job_Vacancy_Website",
     },
     {
       title: "Global Explorer Country Application",
@@ -148,7 +148,7 @@ const Projects = () => {
       des: "A website to showcase university information.",
       src: projectTwentyOne,
       technologies: ["HTML", "CSS", "JS", "PHP"],
-      githubLink: "https://github.com/KaviniPramudika/University-Website",
+      githubLink: "https://github.com/KaviniWickramasooriya/University_Website",
     },
 
     // ── PAGE 6 ──────────────────────────────────────────────
@@ -164,7 +164,7 @@ const Projects = () => {
       des: "A mobile version of the classic Snake game.",
       src: projectSix,
       technologies: ["Kotlin", "SQLite"],
-      githubLink: "https://github.com/KaviniWickramasooriya/Save_The_Rocket_Game",
+      githubLink: "https://github.com/KaviniWickramasooriya/Snake_Game",
     },
     {
       title: "Power Fit Gym Management System",
@@ -222,17 +222,16 @@ const Projects = () => {
   const totalPages = Math.ceil(projects.length / projectsPerPage);
 
   return (
-    <section
-      id="projects"
-      className="w-full py-20 border-b-[1px] border-b-black"
-    >
+    <section id="projects" className="w-full py-20 border-b-[1px] border-b-black">
       <div className="flex justify-center items-center text-center">
         <Title
           title="VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK"
           des="My Projects"
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-8">
+
+      {/* Grid — items-stretch makes all cards equal height per row */}
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch">
         {currentProjects.map((project, index) => (
           <ProjectsCard
             key={index}
@@ -246,39 +245,28 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* Pagination */}
-      <div className="flex justify-center items-center mt-8 gap-3">
+      {/* Pagination — arrows + page counter only */}
+      <div className="flex justify-center items-center mt-10 gap-6">
         <button
           onClick={() => paginate(currentPage - 1)}
           disabled={currentPage === 1}
-          className="p-3 bg-gray-300 text-black rounded-full hover:bg-gray-400 disabled:opacity-50 flex items-center justify-center"
+          className="w-12 h-12 rounded-full bg-gray-700 text-white hover:bg-designColor disabled:opacity-30 disabled:cursor-not-allowed flex items-center justify-center transition-colors duration-300"
           aria-label="Previous Page"
         >
-          <FaChevronLeft size={18} />
+          <FaChevronLeft size={16} />
         </button>
 
-        {/* Page number indicators */}
-        {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => (
-          <button
-            key={num}
-            onClick={() => paginate(num)}
-            className={`w-8 h-8 rounded-full text-sm font-medium transition-colors duration-200 ${
-              currentPage === num
-                ? "bg-designColor text-white"
-                : "bg-gray-700 text-gray-300 hover:bg-gray-500"
-            }`}
-          >
-            {num}
-          </button>
-        ))}
+        <span className="text-gray-400 text-sm">
+          {currentPage} / {totalPages}
+        </span>
 
         <button
           onClick={() => paginate(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="p-3 bg-gray-300 text-black rounded-full hover:bg-gray-400 disabled:opacity-50 flex items-center justify-center"
+          className="w-12 h-12 rounded-full bg-gray-700 text-white hover:bg-designColor disabled:opacity-30 disabled:cursor-not-allowed flex items-center justify-center transition-colors duration-300"
           aria-label="Next Page"
         >
-          <FaChevronRight size={18} />
+          <FaChevronRight size={16} />
         </button>
       </div>
     </section>
